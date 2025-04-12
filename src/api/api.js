@@ -11,7 +11,7 @@ export const baseURL2 = "https://thinkzone.in.net/thinkzone";
 // const baseURL2 = "http://3.142.110.38/thinkzone";
 
 export const Version = {
-  version: "1.5.6",
+  version: "1.0.0",
 };
 
 export const networkStatus =
