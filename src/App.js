@@ -40,6 +40,7 @@ const App = () => {
         }
       >
         <Routes>
+          <Route path="/" element={<DefaultLayout />} />
           <Route exact path="/login" name="Login Page" element={<Login />} />
           <Route exact path="/404" name="Page 404" element={<Page404 />} />
           <Route path="*" name="Home" element={<DefaultLayout />} />

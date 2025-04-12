@@ -16,20 +16,22 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
-import { authenticateUserThunk } from './Login.Thunk'
+import { authenticateAPI } from './Login.Thunk'
 import Swal from 'sweetalert2'
 import { v4 as uuidv4 } from 'uuid'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false) // State to manage password visibility
+  const navigate = useNavigate()
   // const loading = useSelector((state) => state.LoginSlice.loading)
   // const message = useSelector((state) => state.LoginSlice.message)
   if (!localStorage.getItem('uniqueId')) {
     const uuid = uuidv4()
-    localStorage.setItem('uniqueId', newUuid)
-    console.log('New UUID generated and set:', newUuid)
+    localStorage.setItem('uniqueId', uuid)
+    console.log('New UUID generated and set:', uuid)
   }
   const dispatch = useDispatch()
   const showAlert = (message, type = 'error') => {
@@ -48,32 +50,54 @@ const Login = () => {
   const login_button_click = async () => {
     if (!email) {
       showAlert('Please enter a valid email id')
-    } else if (!password) {
+      return // Early return to prevent further execution
+    }
+
+    if (!password) {
       showAlert('Please enter a valid password')
-    } else {
-      const user = {
-        userid: email,
-        pswd: password,
+      return // Early return to prevent further execution
+    }
+
+    const body = {
+      userid: email,
+      pswd: password,
+    }
+
+    try {
+      const response = await authenticateAPI(body)
+
+      // Check if response exists and has the expected properties
+      if (!response) {
+        throw new Error('No response received from server')
       }
 
-      try {
-        const response = await dispatch(authenticateUserThunk(user))
-        console.log('Full response object: ', response) // Log the entire response
-
-        if (response?.payload.length > 0) {
-          console.log('if')
-          showAlert('Login successful', 'success')
-          // Perform further actions, like redirecting the user
-        } else if (response?.payload.length == 0) {
-          console.log('else IF')
-          showAlert(response.message || 'Invalid userid/ password', 'error')
-        } else {
-          console.log('else')
-        }
-      } catch (error) {
-        console.error('Authentication error:', error)
-        showAlert('An error occurred. Please try again.', 'error')
+      // Store approval status in localStorage if it exists
+      if (response.approvalStatus) {
+        localStorage.setItem('approvalStatus', response.approvalStatus)
       }
+
+      // Check for successful login conditions
+      const isApproved = response.approvalStatus === 'approved'
+      const isStatus200 = response.status === 200
+      const hasValidPayload = response?.payload?.length > 0
+
+      // Navigate to home page if approved or status is 200
+      if (isApproved || isStatus200) {
+        navigate('/')
+        showAlert('Login successful', 'success')
+        return
+      }
+
+      // Handle other cases
+      if (hasValidPayload) {
+        // Additional success case if needed
+        showAlert('Login successful', 'success')
+      } else {
+        showAlert(response.message || 'Invalid userid/password', 'error')
+      }
+    } catch (error) {
+      console.error('Authentication error:', error)
+      showAlert(error.message || 'An error occurred. Please try again.', 'error')
     }
   }
   return (
