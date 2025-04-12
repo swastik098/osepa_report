@@ -26,8 +26,8 @@
     "@coreui/react": "^5.5.0",
     "@coreui/react-chartjs": "^3.0.0",
     "@coreui/utils": "^2.0.2",
-    "@reduxjs/toolkit": "^2.2.7",
     "@popperjs/core": "^2.11.8",
+    "@reduxjs/toolkit": "^2.2.7",
     "axios": "^1.8.4",
     "chart.js": "^4.4.7",
     "classnames": "^2.5.1",
@@ -39,7 +39,9 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5",
     "redux": "5.0.1",
-    "simplebar-react": "^3.3.0"
+    "simplebar-react": "^3.3.0",
+    "sweetalert2": "^11.14.3",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",

@@ -1,10 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-// import { authenticateUserThunk } from './Login.Thunk'
 import { authenticateUserThunk } from '../login/Login.Thunk'
-// import { v4 as uuidv4 } from 'uuid'
-
-// const uuid = uuidv4()
-// console.log("check--->", uuid);
+import { v4 as uuidv4 } from 'uuid'
 
 const initialState = {
   data: [],
@@ -18,10 +14,10 @@ const LoginSlice = createSlice({
   name: 'loginslice',
   initialState,
   reducers: {
-    check_login_status(state, action) {
-      state.loggedin = localStorage.getItem('loggedin') === 'yes' ? true : false
+    check_login_status(state) {
+      state.loggedin = localStorage.getItem('loggedin') === 'yes'
     },
-    logout(state, action) {
+    logout(state) {
       const uniqueId = localStorage.getItem('uniqueId')
       localStorage.clear()
       localStorage.setItem('uniqueId', uniqueId)
@@ -40,13 +36,13 @@ const LoginSlice = createSlice({
       })
       .addCase(authenticateUserThunk.fulfilled, (state, action) => {
         state.data = action.payload
-        console.log('action payload', action?.payload, uuid)
         state.loading = false
         state.status = action.meta.requestStatus
 
-        if (action.payload.approvalStatus === 'approved') {
+        if (action.payload?.approvalStatus === 'approved') {
           state.loggedin = true
           state.message = 'Login success'
+
           localStorage.setItem('usertype', action.payload.usertype)
           localStorage.setItem('username', action.payload.username)
           localStorage.setItem('userid', action.payload.userid)
@@ -69,7 +65,7 @@ const LoginSlice = createSlice({
         state.loggedin = false
         state.loading = false
         state.status = action.meta.requestStatus
-        state.message = action.error.message
+        state.message = action.error.message || 'Authentication failed'
         localStorage.clear()
       })
   },

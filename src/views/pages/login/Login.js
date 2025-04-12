@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {
   CButton,
@@ -15,56 +16,66 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
-import { authenticateUserThunk } from "./Login.Thunk";
+import { authenticateUserThunk } from './Login.Thunk'
+import Swal from 'sweetalert2'
+import { v4 as uuidv4 } from 'uuid'
 
 const Login = () => {
-
-  if (!localStorage.getItem("uniqueId")) {
-    // const newUuid = uuidv4();
-    // localStorage.setItem("uniqueId", newUuid);
-    // console.log("New UUID generated and set:", newUuid);
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false) // State to manage password visibility
+  // const loading = useSelector((state) => state.LoginSlice.loading)
+  // const message = useSelector((state) => state.LoginSlice.message)
+  if (!localStorage.getItem('uniqueId')) {
+    const uuid = uuidv4()
+    localStorage.setItem('uniqueId', newUuid)
+    console.log('New UUID generated and set:', newUuid)
   }
-  const showAlert = (message, type = "error") => {
+  const dispatch = useDispatch()
+  const showAlert = (message, type = 'error') => {
     Swal.fire({
       icon: type, // 'error', 'success', 'warning', 'info', 'question'
       title: message,
-      confirmButtonText: "OK",
+      confirmButtonText: 'OK',
       timer: 3000, // Auto close after 3 seconds
       timerProgressBar: true,
-    });
-  };
-  
+    })
+  }
+
+  console.log('email----->', email)
+  console.log('password----->', password)
+
   const login_button_click = async () => {
     if (!email) {
-      showAlert("Please enter a valid email id");
+      showAlert('Please enter a valid email id')
     } else if (!password) {
-      showAlert("Please enter a valid password");
+      showAlert('Please enter a valid password')
     } else {
       const user = {
         userid: email,
         pswd: password,
-      };
+      }
 
       try {
-        const response = await dispatch(authenticateUserThunk(user));
-        console.log("Full response object: ", response); // Log the entire response
+        const response = await dispatch(authenticateUserThunk(user))
+        console.log('Full response object: ', response) // Log the entire response
 
         if (response?.payload.length > 0) {
-          console.log("if");
-          showAlert("Login successful", "success");
+          console.log('if')
+          showAlert('Login successful', 'success')
           // Perform further actions, like redirecting the user
         } else if (response?.payload.length == 0) {
-          console.log("else IF");
-          showAlert(response.message || "Invalid userid/ password", "error");
+          console.log('else IF')
+          showAlert(response.message || 'Invalid userid/ password', 'error')
         } else {
-          console.log("else");
+          console.log('else')
         }
       } catch (error) {
-        console.error("Authentication error:", error);
-        showAlert("An error occurred. Please try again.", "error");
+        console.error('Authentication error:', error)
+        showAlert('An error occurred. Please try again.', 'error')
       }
     }
-  };
+  }
   return (
     <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
@@ -80,7 +91,10 @@ const Login = () => {
                       <CInputGroupText>
                         <CIcon icon={cilUser} />
                       </CInputGroupText>
-                      <CFormInput placeholder="Username" autoComplete="username" />
+                      <CFormInput
+                        placeholder="Username"
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
                       <CInputGroupText>
@@ -89,7 +103,7 @@ const Login = () => {
                       <CFormInput
                         type="password"
                         placeholder="Password"
-                        autoComplete="current-password"
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                     </CInputGroup>
                     <CRow>
