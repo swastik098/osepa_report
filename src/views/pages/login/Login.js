@@ -83,7 +83,7 @@ const Login = () => {
 
       // Navigate to home page if approved or status is 200
       if (isApproved || isStatus200) {
-        navigate('/')
+        navigate('/', { replace: true })
         showAlert('Login successful', 'success')
         return
       }
