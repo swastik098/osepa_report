@@ -77,13 +77,14 @@ const Login = () => {
       }
 
       // Check for successful login conditions
-      const isApproved = response.approvalStatus === 'approved'
+      const isApproved = response.approvalStatus
       const isStatus200 = response.status === 200
       const hasValidPayload = response?.payload?.length > 0
 
       // Navigate to home page if approved or status is 200
       if (isApproved || isStatus200) {
         navigate('/', { replace: true })
+        localStorage.setItem('isApproved', response.data.approvalStatus)
         showAlert('Login successful', 'success')
         return
       }

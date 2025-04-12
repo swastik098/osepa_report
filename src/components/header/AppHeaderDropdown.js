@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom'
 const AppHeaderDropdown = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  
+
   const handleLogout = () => {
     Swal.fire({
       title: 'Are you sure?',
@@ -22,7 +22,7 @@ const AppHeaderDropdown = () => {
       confirmButtonText: 'Yes, log me out!',
     }).then((result) => {
       if (result.isConfirmed) {
-        navigate('/login')
+        navigate('/login', { replace: true })
         localStorage.clear()
       }
     })
