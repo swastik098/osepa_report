@@ -5,15 +5,12 @@ import { cilLockLocked } from '@coreui/icons'
 import Swal from 'sweetalert2' // Import SweetAlert
 import avatar8 from './../../assets/images/user.jpg'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const AppHeaderDropdown = () => {
   const dispatch = useDispatch()
-  // const handleLogout = () => {
-  //   // Your logout logic here
-  //   console.log('User logged out')
-  //   // e.g., localStorage.clear(); navigate('/login');
-  // }
-
+  const navigate = useNavigate()
+  
   const handleLogout = () => {
     Swal.fire({
       title: 'Are you sure?',
