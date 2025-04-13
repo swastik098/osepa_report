@@ -33,423 +33,433 @@ const { RangePicker } = DatePicker
 const ITEMS_PER_LOAD = 10
 const districtSummaryData = [
   {
-    district: 'Anakapalli',
-    block: 'North',
-    numberOfGroups: 3,
-    numberOfClusters: 6,
-    totalStudents: 720,
-    totalSchools: 80,
-    totalContactNumbers: 700,
-    classWiseStudents: {
-      class1: 60,
-      class2: 65,
-      class3: 70,
-      class4: 75,
-      class5: 80,
-      class6: 60,
-      class7: 50,
-      class8: 60,
-      class9: 70,
-      class10: 70,
+    district: 'Khordha',
+    2025: {
+      January: {
+        'Number of Blocks': '112',
+        'Number of Clusters': '1,800',
+        'Number of Groups': '1,400',
+        'Total Students': '16,000',
+        'Total Schools': '410',
+        'Total Contact Numbers': '13,000',
+        classWiseStudents: {
+          class1: 60,
+          class2: 65,
+          class3: 70,
+          class4: 75,
+          class5: 80,
+          class6: 60,
+          class7: 50,
+          class8: 60,
+          class9: 70,
+          class10: 70,
+        },
+      },
+      February: {
+        'Number of Blocks': '112',
+        'Number of Clusters': '1,800',
+        'Number of Groups': '1,400',
+        'Total Students': '16,500',
+        'Total Schools': '415',
+        'Total Contact Numbers': '13,200',
+        'Weekly Class wise Content Shared (Classes 1 to 10)': '220',
+        classWiseStudents: {
+          class1: 60,
+          class2: 65,
+          class3: 70,
+          class4: 75,
+          class5: 80,
+          class6: 60,
+          class7: 50,
+          class8: 60,
+          class9: 70,
+          class10: 70,
+        },
+      },
+      March: {
+        'Number of Blocks': '112',
+        'Number of Clusters': '1,800',
+        'Number of Groups': '1,400',
+        'Total Students': '17,000',
+        'Total Schools': '420',
+        'Total Contact Numbers': '13,500',
+        classWiseStudents: {
+          class1: 60,
+          class2: 65,
+          class3: 70,
+          class4: 75,
+          class5: 80,
+          class6: 60,
+          class7: 50,
+          class8: 60,
+          class9: 70,
+          class10: 70,
+        },
+      },
+      April: {
+        'Number of Blocks': '112',
+        'Number of Clusters': '1,800',
+        'Number of Groups': '1,400',
+        'Total Students': '17,500',
+        'Total Schools': '425',
+        'Total Contact Numbers': '13,700',
+        classWiseStudents: {
+          class1: 60,
+          class2: 65,
+          class3: 70,
+          class4: 75,
+          class5: 80,
+          class6: 60,
+          class7: 50,
+          class8: 60,
+          class9: 70,
+          class10: 70,
+        },
+      },
     },
   },
   {
-    district: 'Anantapur',
-    block: 'West',
-    numberOfGroups: 5,
-    numberOfClusters: 8,
-    totalStudents: 1500,
-    totalSchools: 140,
-    totalContactNumbers: 1200,
-    classWiseStudents: {
-      class1: 130,
-      class2: 140,
-      class3: 150,
-      class4: 120,
-      class5: 110,
-      class6: 130,
-      class7: 140,
-      class8: 130,
-      class9: 120,
-      class10: 120,
+    district: 'Cuttack',
+    2025: {
+      January: {
+        'Number of Blocks': '95',
+        'Number of Clusters': '1,600',
+        'Number of Groups': '1,300',
+        'Total Students': '15,000',
+        'Total Schools': '400',
+        'Total Contact Numbers': '12,500',
+        classWiseStudents: {
+          class1: 55,
+          class2: 60,
+          class3: 65,
+          class4: 70,
+          class5: 75,
+          class6: 55,
+          class7: 50,
+          class8: 55,
+          class9: 65,
+          class10: 65,
+        },
+      },
+      February: {
+        'Number of Blocks': '95',
+        'Number of Clusters': '1,600',
+        'Number of Groups': '1,300',
+        'Total Students': '15,400',
+        'Total Schools': '405',
+        'Total Contact Numbers': '12,700',
+        'Weekly Class wise Content Shared (Classes 1 to 10)': '210',
+        classWiseStudents: {
+          class1: 55,
+          class2: 60,
+          class3: 65,
+          class4: 70,
+          class5: 75,
+          class6: 55,
+          class7: 50,
+          class8: 55,
+          class9: 65,
+          class10: 65,
+        },
+      },
+      March: {
+        'Number of Blocks': '95',
+        'Number of Clusters': '1,600',
+        'Number of Groups': '1,300',
+        'Total Students': '15,800',
+        'Total Schools': '410',
+        'Total Contact Numbers': '12,900',
+        classWiseStudents: {
+          class1: 55,
+          class2: 60,
+          class3: 65,
+          class4: 70,
+          class5: 75,
+          class6: 55,
+          class7: 50,
+          class8: 55,
+          class9: 65,
+          class10: 65,
+        },
+      },
+      April: {
+        'Number of Blocks': '95',
+        'Number of Clusters': '1,600',
+        'Number of Groups': '1,300',
+        'Total Students': '16,200',
+        'Total Schools': '415',
+        'Total Contact Numbers': '13,100',
+        classWiseStudents: {
+          class1: 55,
+          class2: 60,
+          class3: 65,
+          class4: 70,
+          class5: 75,
+          class6: 55,
+          class7: 50,
+          class8: 55,
+          class9: 65,
+          class10: 65,
+        },
+      },
     },
   },
   {
-    district: 'Chittoor',
-    block: 'South',
-    numberOfGroups: 4,
-    numberOfClusters: 7,
-    totalStudents: 1100,
-    totalSchools: 100,
-    totalContactNumbers: 950,
-    classWiseStudents: {
-      class1: 100,
-      class2: 90,
-      class3: 95,
-      class4: 105,
-      class5: 110,
-      class6: 100,
-      class7: 100,
-      class8: 105,
-      class9: 95,
-      class10: 100,
+    district: 'Puri',
+    2025: {
+      January: {
+        'Number of Blocks': '90',
+        'Number of Clusters': '1,500',
+        'Number of Groups': '1,200',
+        'Total Students': '14,000',
+        'Total Schools': '380',
+        'Total Contact Numbers': '12,000',
+        classWiseStudents: {
+          class1: 50,
+          class2: 55,
+          class3: 60,
+          class4: 65,
+          class5: 70,
+          class6: 50,
+          class7: 45,
+          class8: 50,
+          class9: 60,
+          class10: 60,
+        },
+      },
+      February: {
+        'Number of Blocks': '90',
+        'Number of Clusters': '1,500',
+        'Number of Groups': '1,200',
+        'Total Students': '14,400',
+        'Total Schools': '385',
+        'Total Contact Numbers': '12,200',
+        'Weekly Class wise Content Shared (Classes 1 to 10)': '200',
+        classWiseStudents: {
+          class1: 50,
+          class2: 55,
+          class3: 60,
+          class4: 65,
+          class5: 70,
+          class6: 50,
+          class7: 45,
+          class8: 50,
+          class9: 60,
+          class10: 60,
+        },
+      },
+      March: {
+        'Number of Blocks': '90',
+        'Number of Clusters': '1,500',
+        'Number of Groups': '1,200',
+        'Total Students': '14,800',
+        'Total Schools': '390',
+        'Total Contact Numbers': '12,400',
+        classWiseStudents: {
+          class1: 50,
+          class2: 55,
+          class3: 60,
+          class4: 65,
+          class5: 70,
+          class6: 50,
+          class7: 45,
+          class8: 50,
+          class9: 60,
+          class10: 60,
+        },
+      },
+      April: {
+        'Number of Blocks': '90',
+        'Number of Clusters': '1,500',
+        'Number of Groups': '1,200',
+        'Total Students': '15,200',
+        'Total Schools': '395',
+        'Total Contact Numbers': '12,600',
+        classWiseStudents: {
+          class1: 50,
+          class2: 55,
+          class3: 60,
+          class4: 65,
+          class5: 70,
+          class6: 50,
+          class7: 45,
+          class8: 50,
+          class9: 60,
+          class10: 60,
+        },
+      },
     },
   },
   {
-    district: 'Kadapa',
-    block: 'East',
-    numberOfGroups: 2,
-    numberOfClusters: 3,
-    totalStudents: 600,
-    totalSchools: 68,
-    totalContactNumbers: 580,
-    classWiseStudents: {
-      class1: 50,
-      class2: 55,
-      class3: 60,
-      class4: 58,
-      class5: 62,
-      class6: 61,
-      class7: 55,
-      class8: 53,
-      class9: 58,
-      class10: 58,
+    district: 'Balasore',
+    2025: {
+      January: {
+        'Number of Blocks': '105',
+        'Number of Clusters': '1,700',
+        'Number of Groups': '1,350',
+        'Total Students': '15,500',
+        'Total Schools': '400',
+        'Total Contact Numbers': '12,800',
+        classWiseStudents: {
+          class1: 58,
+          class2: 62,
+          class3: 67,
+          class4: 72,
+          class5: 77,
+          class6: 58,
+          class7: 48,
+          class8: 58,
+          class9: 68,
+          class10: 68,
+        },
+      },
+      February: {
+        'Number of Blocks': '105',
+        'Number of Clusters': '1,700',
+        'Number of Groups': '1,350',
+        'Total Students': '15,800',
+        'Total Schools': '405',
+        'Total Contact Numbers': '13,000',
+        'Weekly Class wise Content Shared (Classes 1 to 10)': '210',
+        classWiseStudents: {
+          class1: 58,
+          class2: 62,
+          class3: 67,
+          class4: 72,
+          class5: 77,
+          class6: 58,
+          class7: 48,
+          class8: 58,
+          class9: 68,
+          class10: 68,
+        },
+      },
+      March: {
+        'Number of Blocks': '105',
+        'Number of Clusters': '1,700',
+        'Number of Groups': '1,350',
+        'Total Students': '16,200',
+        'Total Schools': '410',
+        'Total Contact Numbers': '13,200',
+        classWiseStudents: {
+          class1: 58,
+          class2: 62,
+          class3: 67,
+          class4: 72,
+          class5: 77,
+          class6: 58,
+          class7: 48,
+          class8: 58,
+          class9: 68,
+          class10: 68,
+        },
+      },
+      April: {
+        'Number of Blocks': '105',
+        'Number of Clusters': '1,700',
+        'Number of Groups': '1,350',
+        'Total Students': '16,600',
+        'Total Schools': '415',
+        'Total Contact Numbers': '13,400',
+        classWiseStudents: {
+          class1: 58,
+          class2: 62,
+          class3: 67,
+          class4: 72,
+          class5: 77,
+          class6: 58,
+          class7: 48,
+          class8: 58,
+          class9: 68,
+          class10: 68,
+        },
+      },
     },
   },
   {
-    district: 'Kakinada',
-    block: 'Central',
-    numberOfGroups: 6,
-    numberOfClusters: 9,
-    totalStudents: 1300,
-    totalSchools: 110,
-    totalContactNumbers: 1120,
-    classWiseStudents: {
-      class1: 120,
-      class2: 130,
-      class3: 125,
-      class4: 135,
-      class5: 140,
-      class6: 120,
-      class7: 110,
-      class8: 130,
-      class9: 115,
-      class10: 125,
-    },
-  },
-  {
-    district: 'Guntur',
-    block: 'North',
-    numberOfGroups: 3,
-    numberOfClusters: 5,
-    totalStudents: 800,
-    totalSchools: 75,
-    totalContactNumbers: 750,
-    classWiseStudents: {
-      class1: 70,
-      class2: 75,
-      class3: 80,
-      class4: 85,
-      class5: 90,
-      class6: 80,
-      class7: 70,
-      class8: 75,
-      class9: 85,
-      class10: 90,
-    },
-  },
-  {
-    district: 'Eluru',
-    block: 'West',
-    numberOfGroups: 4,
-    numberOfClusters: 7,
-    totalStudents: 950,
-    totalSchools: 85,
-    totalContactNumbers: 870,
-    classWiseStudents: {
-      class1: 85,
-      class2: 80,
-      class3: 75,
-      class4: 95,
-      class5: 90,
-      class6: 85,
-      class7: 80,
-      class8: 90,
-      class9: 85,
-      class10: 85,
-    },
-  },
-  {
-    district: 'East Godavari',
-    block: 'East',
-    numberOfGroups: 1,
-    numberOfClusters: 2,
-    totalStudents: 300,
-    totalSchools: 35,
-    totalContactNumbers: 250,
-    classWiseStudents: {
-      class1: 30,
-      class2: 25,
-      class3: 35,
-      class4: 30,
-      class5: 32,
-      class6: 28,
-      class7: 27,
-      class8: 28,
-      class9: 32,
-      class10: 33,
-    },
-  },
-  {
-    district: 'Bapatla',
-    block: 'South',
-    numberOfGroups: 2,
-    numberOfClusters: 3,
-    totalStudents: 500,
-    totalSchools: 55,
-    totalContactNumbers: 480,
-    classWiseStudents: {
-      class1: 45,
-      class2: 50,
-      class3: 55,
-      class4: 60,
-      class5: 50,
-      class6: 40,
-      class7: 45,
-      class8: 48,
-      class9: 52,
-      class10: 55,
-    },
-  },
-  {
-    district: 'ASR',
-    block: 'North',
-    numberOfGroups: 3,
-    numberOfClusters: 6,
-    totalStudents: 760,
-    totalSchools: 70,
-    totalContactNumbers: 720,
-    classWiseStudents: {
-      class1: 70,
-      class2: 75,
-      class3: 80,
-      class4: 85,
-      class5: 75,
-      class6: 70,
-      class7: 68,
-      class8: 69,
-      class9: 70,
-      class10: 68,
-    },
-  },
-  {
-    district: 'Annamayya',
-    block: 'Central',
-    numberOfGroups: 2,
-    numberOfClusters: 4,
-    totalStudents: 540,
-    totalSchools: 50,
-    totalContactNumbers: 500,
-    classWiseStudents: {
-      class1: 50,
-      class2: 48,
-      class3: 55,
-      class4: 52,
-      class5: 53,
-      class6: 54,
-      class7: 50,
-      class8: 48,
-      class9: 55,
-      class10: 55,
-    },
-  },
-  {
-    district: 'Vizianagaram',
-    block: 'East',
-    numberOfGroups: 3,
-    numberOfClusters: 6,
-    totalStudents: 800,
-    totalSchools: 78,
-    totalContactNumbers: 770,
-    classWiseStudents: {
-      class1: 72,
-      class2: 75,
-      class3: 76,
-      class4: 78,
-      class5: 82,
-      class6: 80,
-      class7: 78,
-      class8: 76,
-      class9: 77,
-      class10: 76,
-    },
-  },
-  {
-    district: 'Nellore',
-    block: 'South',
-    numberOfGroups: 4,
-    numberOfClusters: 8,
-    totalStudents: 1000,
-    totalSchools: 95,
-    totalContactNumbers: 950,
-    classWiseStudents: {
-      class1: 90,
-      class2: 95,
-      class3: 100,
-      class4: 85,
-      class5: 90,
-      class6: 88,
-      class7: 87,
-      class8: 86,
-      class9: 89,
-      class10: 90,
-    },
-  },
-  {
-    district: 'Prakasam',
-    block: 'West',
-    numberOfGroups: 3,
-    numberOfClusters: 5,
-    totalStudents: 870,
-    totalSchools: 82,
-    totalContactNumbers: 850,
-    classWiseStudents: {
-      class1: 80,
-      class2: 85,
-      class3: 87,
-      class4: 90,
-      class5: 92,
-      class6: 88,
-      class7: 86,
-      class8: 84,
-      class9: 86,
-      class10: 90,
-    },
-  },
-  {
-    district: 'Srikakulam',
-    block: 'East',
-    numberOfGroups: 2,
-    numberOfClusters: 4,
-    totalStudents: 620,
-    totalSchools: 60,
-    totalContactNumbers: 590,
-    classWiseStudents: {
-      class1: 60,
-      class2: 62,
-      class3: 65,
-      class4: 58,
-      class5: 60,
-      class6: 64,
-      class7: 62,
-      class8: 60,
-      class9: 63,
-      class10: 66,
-    },
-  },
-  {
-    district: 'Tirupati',
-    block: 'Central',
-    numberOfGroups: 4,
-    numberOfClusters: 7,
-    totalStudents: 980,
-    totalSchools: 88,
-    totalContactNumbers: 940,
-    classWiseStudents: {
-      class1: 85,
-      class2: 90,
-      class3: 92,
-      class4: 94,
-      class5: 96,
-      class6: 90,
-      class7: 88,
-      class8: 89,
-      class9: 91,
-      class10: 95,
-    },
-  },
-  {
-    district: 'Vijayawada',
-    block: 'North',
-    numberOfGroups: 5,
-    numberOfClusters: 9,
-    totalStudents: 1200,
-    totalSchools: 105,
-    totalContactNumbers: 1150,
-    classWiseStudents: {
-      class1: 110,
-      class2: 115,
-      class3: 118,
-      class4: 120,
-      class5: 122,
-      class6: 115,
-      class7: 110,
-      class8: 108,
-      class9: 112,
-      class10: 120,
-    },
-  },
-  {
-    district: 'West Godavari',
-    block: 'West',
-    numberOfGroups: 4,
-    numberOfClusters: 8,
-    totalStudents: 960,
-    totalSchools: 90,
-    totalContactNumbers: 920,
-    classWiseStudents: {
-      class1: 88,
-      class2: 90,
-      class3: 92,
-      class4: 95,
-      class5: 96,
-      class6: 91,
-      class7: 89,
-      class8: 88,
-      class9: 90,
-      class10: 91,
-    },
-  },
-  {
-    district: 'Kurnool',
-    block: 'South',
-    numberOfGroups: 3,
-    numberOfClusters: 6,
-    totalStudents: 830,
-    totalSchools: 77,
-    totalContactNumbers: 800,
-    classWiseStudents: {
-      class1: 75,
-      class2: 78,
-      class3: 80,
-      class4: 83,
-      class5: 85,
-      class6: 80,
-      class7: 78,
-      class8: 75,
-      class9: 77,
-      class10: 80,
-    },
-  },
-  {
-    district: 'Nandyal',
-    block: 'East',
-    numberOfGroups: 2,
-    numberOfClusters: 4,
-    totalStudents: 670,
-    totalSchools: 65,
-    totalContactNumbers: 640,
-    classWiseStudents: {
-      class1: 60,
-      class2: 65,
-      class3: 68,
-      class4: 70,
-      class5: 72,
-      class6: 66,
-      class7: 64,
-      class8: 63,
-      class9: 65,
-      class10: 67,
+    district: 'Ganjam',
+    2025: {
+      January: {
+        'Number of Blocks': '100',
+        'Number of Clusters': '1,700',
+        'Number of Groups': '1,300',
+        'Total Students': '15,000',
+        'Total Schools': '395',
+        'Total Contact Numbers': '12,600',
+        classWiseStudents: {
+          class1: 56,
+          class2: 60,
+          class3: 65,
+          class4: 70,
+          class5: 75,
+          class6: 56,
+          class7: 48,
+          class8: 56,
+          class9: 66,
+          class10: 66,
+        },
+      },
+      February: {
+        'Number of Blocks': '100',
+        'Number of Clusters': '1,700',
+        'Number of Groups': '1,300',
+        'Total Students': '15,400',
+        'Total Schools': '400',
+        'Total Contact Numbers': '12,800',
+        'Weekly Class wise Content Shared (Classes 1 to 10)': '200',
+        classWiseStudents: {
+          class1: 56,
+          class2: 60,
+          class3: 65,
+          class4: 70,
+          class5: 75,
+          class6: 56,
+          class7: 48,
+          class8: 56,
+          class9: 66,
+          class10: 66,
+        },
+      },
+      March: {
+        'Number of Blocks': '100',
+        'Number of Clusters': '1,700',
+        'Number of Groups': '1,300',
+        'Total Students': '15,800',
+        'Total Schools': '405',
+        'Total Contact Numbers': '13,000',
+        classWiseStudents: {
+          class1: 56,
+          class2: 60,
+          class3: 65,
+          class4: 70,
+          class5: 75,
+          class6: 56,
+          class7: 48,
+          class8: 56,
+          class9: 66,
+          class10: 66,
+        },
+      },
+      April: {
+        'Number of Blocks': '100',
+        'Number of Clusters': '1,700',
+        'Number of Groups': '1,300',
+        'Total Students': '16,200',
+        'Total Schools': '410',
+        'Total Contact Numbers': '13,200',
+        classWiseStudents: {
+          class1: 56,
+          class2: 60,
+          class3: 65,
+          class4: 70,
+          class5: 75,
+          class6: 56,
+          class7: 48,
+          class8: 56,
+          class9: 66,
+          class10: 66,
+        },
+      },
     },
   },
 ]
@@ -466,6 +476,8 @@ const Dashboard = (props) => {
   const [selectedRange, setSelectedRange] = useState([])
   const [stDate, setStDate] = useState()
   const [NdDate, setNdDate] = useState()
+  const [selectedYear, setSelectedYear] = useState(null)
+  const [selectedMonth, setSelectedMonth] = useState(null)
 
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_LOAD)
   const containerRef = useRef(null)
@@ -587,15 +599,41 @@ const Dashboard = (props) => {
     boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
   }
   const thStyle = {
-    padding: '10px',
+    padding: '8px',
+    textAlign: 'center',
     border: '1px solid #ddd',
-    fontWeight: 'bold',
-    textAlign: 'left',
+    backgroundColor: '#f0f0f0',
   }
 
   const tdStyle = {
-    padding: '10px',
+    padding: '8px',
+    textAlign: 'center',
     border: '1px solid #ddd',
+  }
+
+  const renderRows = () => {
+    return districtSummaryData.slice(0, visibleCount).map((row, idx) => {
+      return Object.keys(row[2025]).map((month) => {
+        const monthData = row[2025][month]
+        return (
+          <tr key={`${idx}-${month}`}>
+            <td style={tdStyle}>{row.district}</td>
+            <td style={tdStyle}>{row.block || 'N/A'}</td>{' '}
+            {/* Assuming block data is not part of current data */}
+            <td style={tdStyle}>{monthData['Number of Groups']}</td>
+            <td style={tdStyle}>{monthData['Number of Clusters']}</td>
+            <td style={tdStyle}>{monthData['Total Students']}</td>
+            <td style={tdStyle}>{monthData['Total Schools']}</td>
+            <td style={tdStyle}>{monthData['Total Contact Numbers']}</td>
+            {Array.from({ length: 10 }, (_, i) => (
+              <td key={i} style={tdStyle}>
+                {monthData.classWiseStudents[`class${i + 1}`]}
+              </td>
+            ))}
+          </tr>
+        )
+      })
+    })
   }
 
   const handleDistrictChange = (selectedOption) => {
@@ -630,26 +668,17 @@ const Dashboard = (props) => {
       school: selectedOption?.value || '',
     }))
   }
-  const handleRangeChange = async (dates) => {
-    if (dates && dates.length === 2) {
-      const [startDate, endDate] = dates
-      console.log('Start Date:', startDate.format('DD.MM.YYYY'))
-      console.log('End Date:', endDate.format('DD.MM.YYYY'))
-      setStDate(startDate.format('YYYY-MM-DD'))
-      setNdDate(endDate.format('YYYY-MM-DD'))
-    }
+  const handleRangeChange = (dates) => {
     setSelectedRange(dates)
-  }
 
-  const barData = {
-    labels: ['MPP_ZPP', 'MUNICIPAL', 'STATE GOVT.'],
-    datasets: [
-      {
-        label: 'Teachers Completed',
-        data: [109, 3, 1], // Replace with dynamic data if available
-        backgroundColor: '#9575cd',
-      },
-    ],
+    if (dates && dates.length === 2) {
+      const start = dates[0]
+      setSelectedYear(start.year())
+      setSelectedMonth(start.format('MMMM')) // Gives "January", "February", etc.
+    } else {
+      setSelectedYear(null)
+      setSelectedMonth(null)
+    }
   }
 
   const barOptions = {
@@ -673,38 +702,6 @@ const Dashboard = (props) => {
         ticks: { font: { size: 12 } },
       },
     },
-  }
-
-  const chartRelevantFields = [
-    'Number of Content Shared',
-    'Weekly Class wise Content Shared (Classes 1 to 10)',
-    'Number of Content Read',
-    'Videos Received',
-    'Images Received',
-    'Audios Received',
-    'Class wise Number of Students (Classes 1 to 10)',
-    'Two-way Interaction Messages',
-  ]
-
-  const shouldShowChart = (filters) => {
-    const visibleFields = getDashboardFields(filters)
-    return visibleFields.some((field) => chartRelevantFields.includes(field))
-  }
-
-  const progressData = {
-    labels: ['PDF', 'SUMMOD-1', 'VIDEO', 'PDF', 'SUMMOD-2', 'VIDEO'],
-    datasets: [
-      {
-        label: 'GPC01M01SM01',
-        data: [628, 1820, 1829],
-        backgroundColor: ['#36A2EB', '#36A2EB', '#36A2EB'],
-      },
-      {
-        label: 'GPC01M01SM02',
-        data: [457, 547, 555],
-        backgroundColor: ['#FF9F40', '#FF9F40', '#FF9F40'],
-      },
-    ],
   }
 
   const getDashboardFields = (filters) => {
@@ -811,35 +808,543 @@ const Dashboard = (props) => {
     'Two-way Interaction Messages': '3,200',
   }
 
-  const dashboardFields = getDashboardFields(filters)
-  const chartFieldsMap = {
-    'Number of Content Shared': 'Number of Content Shared',
-    'Weekly Class wise Content Shared (Classes 1 to 10)': 'Weekly Classwise Content Shared',
-    'Number of Content Read': 'Content Read',
-    'Videos Received': 'Videos Received',
-    'Images Received': 'Images Received',
-    'Audios Received': 'Audios Received',
-    'Class wise Number of Students (Classes 1 to 10)': 'Classwise Students',
-    'Class wise no of students (1 to 10)': 'Classwise Students',
-    'Total number of schools': 'Total Schools',
-    'Total no of Schools': 'Total Schools',
-    'Number of Students': 'Total Students',
-    'Class wise no of students': 'Classwise Students',
-    'Two-way Interaction Messages': 'Two-way Messages',
+  const dashboardValuesByRegion = {
+    khordha: {
+      2025: {
+        January: {
+          'Number of Blocks': '310',
+          'Number of Clusters': '5,300',
+          'Number of Groups': '4,500',
+          'Total Students': '57,000',
+          'Total Schools': '1,150',
+          'Total Contact Numbers': '48,000',
+          'Number of Content Shared': '8,700',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '1,150',
+          'Number of Content Read': '7,400',
+          'Videos Received': '2,200',
+          'Images Received': '1,150',
+          'Audios Received': '860',
+          'Class wise Number of Students (Classes 1 to 10)': 'Varies by class',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '450',
+          'Total no of Schools': '450',
+          'Number of Students': '8,000',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '3,000',
+        },
+        February: {
+          'Number of Blocks': '312',
+          'Number of Clusters': '5,350',
+          'Number of Groups': '4,600',
+          'Total Students': '58,500',
+          'Total Schools': '1,160',
+          'Total Contact Numbers': '49,000',
+          'Number of Content Shared': '9,000',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '1,180',
+          'Number of Content Read': '7,800',
+          'Videos Received': '2,250',
+          'Images Received': '1,200',
+          'Audios Received': '870',
+          'Class wise Number of Students (Classes 1 to 10)': 'Updated',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '455',
+          'Total no of Schools': '455',
+          'Number of Students': '8,100',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '3,100',
+        },
+        March: {
+          'Number of Blocks': '313',
+          'Number of Clusters': '5,400',
+          'Number of Groups': '4,700',
+          'Total Students': '60,000',
+          'Total Schools': '1,170',
+          'Total Contact Numbers': '50,000',
+          'Number of Content Shared': '9,400',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '1,200',
+          'Number of Content Read': '8,200',
+          'Videos Received': '2,300',
+          'Images Received': '1,250',
+          'Audios Received': '880',
+          'Class wise Number of Students (Classes 1 to 10)': 'Refreshed Data',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '460',
+          'Total no of Schools': '460',
+          'Number of Students': '8,200',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '3,150',
+        },
+        April: {
+          'Number of Blocks': '314',
+          'Number of Clusters': '5,500',
+          'Number of Groups': '4,800',
+          'Total Students': '61,500',
+          'Total Schools': '1,180',
+          'Total Contact Numbers': '51,000',
+          'Number of Content Shared': '9,800',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '1,220',
+          'Number of Content Read': '8,600',
+          'Videos Received': '2,400',
+          'Images Received': '1,300',
+          'Audios Received': '890',
+          'Class wise Number of Students (Classes 1 to 10)': 'April Stats',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '470',
+          'Total no of Schools': '470',
+          'Number of Students': '8,300',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '3,200',
+        },
+      },
+    },
+
+    cuttack: {
+      2025: {
+        January: {
+          'Number of Blocks': '290',
+          'Number of Clusters': '3,800',
+          'Number of Groups': '3,100',
+          'Total Students': '45,000',
+          'Total Schools': '900',
+          'Total Contact Numbers': '37,000',
+          'Number of Content Shared': '6,200',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '980',
+          'Number of Content Read': '6,000',
+          'Videos Received': '1,800',
+          'Images Received': '900',
+          'Audios Received': '700',
+          'Class wise Number of Students (Classes 1 to 10)': 'Even Distribution',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '420',
+          'Total no of Schools': '420',
+          'Number of Students': '7,000',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '2,400',
+        },
+        February: {
+          'Number of Blocks': '292',
+          'Number of Clusters': '3,900',
+          'Number of Groups': '3,200',
+          'Total Students': '46,500',
+          'Total Schools': '920',
+          'Total Contact Numbers': '38,000',
+          'Number of Content Shared': '6,500',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '1,000',
+          'Number of Content Read': '6,200',
+          'Videos Received': '1,850',
+          'Images Received': '940',
+          'Audios Received': '720',
+          'Class wise Number of Students (Classes 1 to 10)': 'Balanced',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '430',
+          'Total no of Schools': '430',
+          'Number of Students': '7,100',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '2,500',
+        },
+        March: {
+          'Number of Blocks': '293',
+          'Number of Clusters': '4,000',
+          'Number of Groups': '3,300',
+          'Total Students': '48,000',
+          'Total Schools': '940',
+          'Total Contact Numbers': '39,000',
+          'Number of Content Shared': '6,800',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '1,020',
+          'Number of Content Read': '6,400',
+          'Videos Received': '1,900',
+          'Images Received': '970',
+          'Audios Received': '740',
+          'Class wise Number of Students (Classes 1 to 10)': 'Varied',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '440',
+          'Total no of Schools': '440',
+          'Number of Students': '7,200',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '2,550',
+        },
+        April: {
+          'Number of Blocks': '295',
+          'Number of Clusters': '4,100',
+          'Number of Groups': '3,400',
+          'Total Students': '49,500',
+          'Total Schools': '950',
+          'Total Contact Numbers': '40,000',
+          'Number of Content Shared': '7,100',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '1,050',
+          'Number of Content Read': '6,600',
+          'Videos Received': '2,000',
+          'Images Received': '1,000',
+          'Audios Received': '760',
+          'Class wise Number of Students (Classes 1 to 10)': 'Increasing',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '450',
+          'Total no of Schools': '450',
+          'Number of Students': '7,300',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '2,600',
+        },
+      },
+    },
+
+    puri: {
+      2025: {
+        January: {
+          'Number of Blocks': '150',
+          'Number of Clusters': '2,000',
+          'Number of Groups': '1,600',
+          'Total Students': '25,000',
+          'Total Schools': '500',
+          'Total Contact Numbers': '20,000',
+          'Number of Content Shared': '4,000',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '650',
+          'Number of Content Read': '3,200',
+          'Videos Received': '900',
+          'Images Received': '500',
+          'Audios Received': '300',
+          'Class wise Number of Students (Classes 1 to 10)': 'Small Distribution',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '250',
+          'Total no of Schools': '250',
+          'Number of Students': '4,000',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '1,000',
+        },
+        February: {
+          'Number of Blocks': '152',
+          'Number of Clusters': '2,100',
+          'Number of Groups': '1,700',
+          'Total Students': '26,000',
+          'Total Schools': '510',
+          'Total Contact Numbers': '21,000',
+          'Number of Content Shared': '4,300',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '670',
+          'Number of Content Read': '3,400',
+          'Videos Received': '950',
+          'Images Received': '520',
+          'Audios Received': '320',
+          'Class wise Number of Students (Classes 1 to 10)': 'Refreshed',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '255',
+          'Total no of Schools': '255',
+          'Number of Students': '4,100',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '1,050',
+        },
+        March: {
+          'Number of Blocks': '153',
+          'Number of Clusters': '2,200',
+          'Number of Groups': '1,800',
+          'Total Students': '27,000',
+          'Total Schools': '520',
+          'Total Contact Numbers': '22,000',
+          'Number of Content Shared': '4,600',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '690',
+          'Number of Content Read': '3,600',
+          'Videos Received': '1,000',
+          'Images Received': '540',
+          'Audios Received': '340',
+          'Class wise Number of Students (Classes 1 to 10)': 'Upgraded',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '260',
+          'Total no of Schools': '260',
+          'Number of Students': '4,200',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '1,100',
+        },
+        April: {
+          'Number of Blocks': '155',
+          'Number of Clusters': '2,300',
+          'Number of Groups': '1,900',
+          'Total Students': '28,000',
+          'Total Schools': '530',
+          'Total Contact Numbers': '23,000',
+          'Number of Content Shared': '4,900',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '710',
+          'Number of Content Read': '3,800',
+          'Videos Received': '1,050',
+          'Images Received': '560',
+          'Audios Received': '360',
+          'Class wise Number of Students (Classes 1 to 10)': 'Latest',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '265',
+          'Total no of Schools': '265',
+          'Number of Students': '4,300',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '1,150',
+        },
+      },
+    },
+
+    balasore: {
+      2025: {
+        January: {
+          'Number of Blocks': '120',
+          'Number of Clusters': '1,800',
+          'Number of Groups': '1,400',
+          'Total Students': '18,000',
+          'Total Schools': '450',
+          'Total Contact Numbers': '15,000',
+          'Number of Content Shared': '3,500',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '550',
+          'Number of Content Read': '2,800',
+          'Videos Received': '800',
+          'Images Received': '450',
+          'Audios Received': '280',
+          'Class wise Number of Students (Classes 1 to 10)': 'Small Distribution',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '200',
+          'Total no of Schools': '200',
+          'Number of Students': '3,500',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '900',
+        },
+        February: {
+          'Number of Blocks': '122',
+          'Number of Clusters': '1,900',
+          'Number of Groups': '1,500',
+          'Total Students': '19,000',
+          'Total Schools': '460',
+          'Total Contact Numbers': '16,000',
+          'Number of Content Shared': '3,700',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '570',
+          'Number of Content Read': '3,000',
+          'Videos Received': '850',
+          'Images Received': '470',
+          'Audios Received': '300',
+          'Class wise Number of Students (Classes 1 to 10)': 'Updated',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '205',
+          'Total no of Schools': '205',
+          'Number of Students': '3,700',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '950',
+        },
+        March: {
+          'Number of Blocks': '125',
+          'Number of Clusters': '2,000',
+          'Number of Groups': '1,600',
+          'Total Students': '20,000',
+          'Total Schools': '470',
+          'Total Contact Numbers': '17,000',
+          'Number of Content Shared': '3,900',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '590',
+          'Number of Content Read': '3,200',
+          'Videos Received': '900',
+          'Images Received': '490',
+          'Audios Received': '320',
+          'Class wise Number of Students (Classes 1 to 10)': 'Refreshed Data',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '210',
+          'Total no of Schools': '210',
+          'Number of Students': '3,900',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '1,000',
+        },
+        April: {
+          'Number of Blocks': '128',
+          'Number of Clusters': '2,100',
+          'Number of Groups': '1,700',
+          'Total Students': '21,000',
+          'Total Schools': '480',
+          'Total Contact Numbers': '18,000',
+          'Number of Content Shared': '4,100',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '610',
+          'Number of Content Read': '3,400',
+          'Videos Received': '950',
+          'Images Received': '510',
+          'Audios Received': '340',
+          'Class wise Number of Students (Classes 1 to 10)': 'Latest Stats',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '215',
+          'Total no of Schools': '215',
+          'Number of Students': '4,100',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '1,050',
+        },
+      },
+    },
+    ganjam: {
+      2025: {
+        January: {
+          'Number of Blocks': '110',
+          'Number of Clusters': '1,700',
+          'Number of Groups': '1,300',
+          'Total Students': '15,000',
+          'Total Schools': '400',
+          'Total Contact Numbers': '12,000',
+          'Number of Content Shared': '3,000',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '500',
+          'Number of Content Read': '2,500',
+          'Videos Received': '750',
+          'Images Received': '420',
+          'Audios Received': '270',
+          'Class wise Number of Students (Classes 1 to 10)': 'Minimal Distribution',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '190',
+          'Total no of Schools': '190',
+          'Number of Students': '3,000',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '800',
+        },
+        February: {
+          'Number of Blocks': '112',
+          'Number of Clusters': '1,800',
+          'Number of Groups': '1,400',
+          'Total Students': '16,000',
+          'Total Schools': '410',
+          'Total Contact Numbers': '13,000',
+          'Number of Content Shared': '3,200',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '520',
+          'Number of Content Read': '2,700',
+          'Videos Received': '800',
+          'Images Received': '440',
+          'Audios Received': '290',
+          'Class wise Number of Students (Classes 1 to 10)': 'Updated Data',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '195',
+          'Total no of Schools': '195',
+          'Number of Students': '3,200',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '850',
+        },
+        March: {
+          'Number of Blocks': '115',
+          'Number of Clusters': '1,900',
+          'Number of Groups': '1,500',
+          'Total Students': '17,000',
+          'Total Schools': '420',
+          'Total Contact Numbers': '14,000',
+          'Number of Content Shared': '3,400',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '540',
+          'Number of Content Read': '2,900',
+          'Videos Received': '850',
+          'Images Received': '460',
+          'Audios Received': '310',
+          'Class wise Number of Students (Classes 1 to 10)': 'Updated Stats',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '200',
+          'Total no of Schools': '200',
+          'Number of Students': '3,400',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '900',
+        },
+        April: {
+          'Number of Blocks': '118',
+          'Number of Clusters': '2,000',
+          'Number of Groups': '1,600',
+          'Total Students': '18,000',
+          'Total Schools': '430',
+          'Total Contact Numbers': '15,000',
+          'Number of Content Shared': '3,600',
+          'Weekly Class wise Content Shared (Classes 1 to 10)': '560',
+          'Number of Content Read': '3,100',
+          'Videos Received': '900',
+          'Images Received': '480',
+          'Audios Received': '330',
+          'Class wise Number of Students (Classes 1 to 10)': 'Latest Update',
+          'Class wise no of students (1 to 10)': 'Dynamic Count',
+          'Total number of schools': '205',
+          'Total no of Schools': '205',
+          'Number of Students': '3,600',
+          'Class wise no of students': 'Dynamic',
+          'Two-way Interaction Messages': '950',
+        },
+      },
+    },
   }
-  const getLineChartData = (dashboardValues) => {
+
+  const fieldConfigs = {
+    // 🟩 Structural Counts - District/Block/Cluster/Groups
+    'Number of Districts': { color: '#AED581' },
+    'Number of Blocks': { color: '#81C784' },
+    'Number of Clusters': { color: '#66BB6A' },
+    'Number of Groups': { color: '#4DB6AC' },
+
+    // 🟦 Student & School Metrics
+    'Total Students': { color: '#64B5F6' },
+    'Total Schools': { color: '#4FC3F7' },
+    'Total number of schools': { color: '#4FC3F7' },
+    'Total no of Schools': { color: '#4FC3F7' },
+    'Number of Students': { color: '#64B5F6' },
+
+    // 🟪 Contact Info
+    'Total Contact Numbers': { color: '#BA68C8' },
+
+    // 🟨 Content Sharing Metrics
+    'Number of Content Shared': { color: '#FFD54F' },
+    'Weekly Class wise Content Shared (Classes 1 to 10)': { color: '#FFCA28' },
+    'Number of Content Read': { color: '#FFB300' },
+
+    // 🟧 Media Shared
+    'Videos Received': { color: '#FF8A65' },
+    'Images Received': { color: '#FF7043' },
+    'Audios Received': { color: '#FF5722' },
+
+    // 🟫 Class-wise Student Counts
+    'Class wise Number of Students (Classes 1 to 10)': { color: '#A1887F' },
+    'Class wise no of students (1 to 10)': { color: '#A1887F' },
+    'Class wise no of students': { color: '#A1887F' },
+
+    // 🟥 Communication
+    'Two-way Interaction Messages': { color: '#E57373' },
+  }
+
+  const progressChartFields = [
+    'Number of Blocks',
+    'Number of Clusters',
+    'Number of Groups',
+    'Total Students',
+    'Total Schools',
+    'Total Contact Numbers',
+  ]
+
+  const getProgressChartData = (dashboardValues) => {
     const labels = []
     const data = []
 
-    for (const [key, label] of Object.entries(chartFieldsMap)) {
-      const rawValue = dashboardValues[key]
-      const numeric = typeof rawValue === 'string' ? parseInt(rawValue.replace(/,/g, '')) : rawValue
-
-      if (!isNaN(numeric)) {
-        labels.push(label)
-        data.push(numeric)
+    progressChartFields.forEach((field) => {
+      const value = dashboardValues[field]
+      if (value && !isNaN(Number(value.replace(/,/g, '')))) {
+        labels.push(field)
+        data.push(Number(value.replace(/,/g, '')))
       }
+    })
+
+    return {
+      labels,
+      datasets: [
+        {
+          label: 'Status Count',
+          data,
+          backgroundColor: '#42a5f5',
+        },
+      ],
     }
+  }
+
+  const getLineChartData = (dashboard) => {
+    const metricKeys = [
+      'Number of Content Shared',
+      'Weekly Class wise Content Shared (Classes 1 to 10)',
+      'Number of Content Read',
+      'Videos Received',
+      'Images Received',
+      'Audios Received',
+      'Two-way Interaction Messages',
+    ]
+
+    const labels = []
+    const data = []
+
+    metricKeys.forEach((key) => {
+      const value = dashboard[key]
+
+      if (value && !isNaN(parseInt(value.replace(/,/g, '')))) {
+        labels.push(key)
+        data.push(parseInt(value.replace(/,/g, '')))
+      }
+    })
 
     return {
       labels,
@@ -850,19 +1355,33 @@ const Dashboard = (props) => {
           fill: false,
           borderColor: '#42a5f5',
           backgroundColor: '#42a5f5',
-          tension: 0.4,
+          tension: 0.3,
         },
       ],
     }
   }
 
-  const lineData = getLineChartData(dashboardValues)
+  const selectedRegionKey = filters.school || filters.cluster || filters.block || filters.district
+
+  let selectedDashboardValues = dashboardValues
+
+  if (selectedRegionKey && selectedYear && selectedMonth) {
+    selectedDashboardValues =
+      dashboardValuesByRegion[selectedRegionKey]?.[selectedYear]?.[selectedMonth] || dashboardValues
+  }
+  if (!dashboardValuesByRegion[selectedRegionKey]?.[selectedYear]?.[selectedMonth]) {
+    console.warn('No data for selected date range. Showing default values.')
+  }
+
+  const lineData = getLineChartData(selectedDashboardValues)
+  const progressData = getProgressChartData(selectedDashboardValues)
   return (
     <div
       style={{
         padding: '20px',
         background: 'linear-gradient(135deg, #e0f7fa, #fce4ec)',
         minHeight: '100vh',
+        boxSizing: 'border-box',
       }}
     >
       {/* Filters */}
@@ -872,8 +1391,9 @@ const Dashboard = (props) => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
           gap: '15px',
           marginBottom: '30px',
-          maxWidth: '1200px',
-          // marginLeft: -104,
+          maxWidth: '100%',
+          padding: '0 16px',
+          boxSizing: 'border-box',
         }}
       >
         <Select
@@ -937,29 +1457,42 @@ const Dashboard = (props) => {
           display: 'flex',
           flexWrap: 'wrap',
           gap: '16px',
-          maxWidth: '1400px',
-          margin: '0 auto 30px auto',
+          // maxWidth: '1400px',
+          // margin: '0 auto 30px auto',
+          justifyContent: 'center',
+          padding: '0 16px',
+          boxSizing: 'border-box',
         }}
       >
-        {dashboardFields.map((title, index) => (
-          <div
-            key={index}
-            style={{
-              flex: '1 1 calc(20% - 16px)',
-              backgroundColor: index % 2 === 0 ? '#A3D9A5' : '#B1A7E7',
-              borderRadius: '12px',
-              padding: '16px',
-              textAlign: 'center',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-              minWidth: '200px',
-            }}
-          >
-            <h3 style={{ margin: 0, fontSize: '24px', fontWeight: 'bold' }}>
-              {dashboardValues[title] || '--'}
-            </h3>
-            <p style={{ margin: 0, fontSize: '14px' }}>{title}</p>
-          </div>
-        ))}
+        {getDashboardFields(filters).map((field) => {
+          const value = selectedDashboardValues[field]
+          if (!value) return null
+
+          return (
+            <div
+              key={field}
+              style={{
+                flex: '1 1 220px',
+                maxWidth: '250px',
+                backgroundColor: fieldConfigs[field]?.color || '#E0E0E0',
+                borderRadius: '12px',
+                padding: '16px',
+                textAlign: 'center',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                // flex: '1 1 calc(20% - 16px)',
+                // backgroundColor: fieldConfigs[field]?.color || '#E0E0E0',
+                // borderRadius: '12px',
+                // padding: '16px',
+                // textAlign: 'center',
+                // boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                // minWidth: '200px',
+              }}
+            >
+              <h3 style={{ margin: 0, fontSize: '28px', fontWeight: 'bold' }}>{value}</h3>
+              <p style={{ margin: 0, fontSize: '14px' }}>{field}</p>
+            </div>
+          )
+        })}
       </div>
 
       {/* Charts Section */}
@@ -983,12 +1516,14 @@ const Dashboard = (props) => {
           </div>
         )}
 
-        <div style={cardStyle}>
-          <h3 style={{ marginBottom: '16px', textAlign: 'center' }}>
-            Status of In-Progress Teachers
-          </h3>
-          <Bar data={progressData} options={barOptions} />
-        </div>
+        {progressData.labels.length > 0 && (
+          <div style={cardStyle}>
+            <h3 style={{ marginBottom: '16px', textAlign: 'center' }}>
+              Status of In-Progress Teachers
+            </h3>
+            <Bar data={progressData} options={barOptions} />
+          </div>
+        )}
 
         {/* Table datas */}
         <div style={{ ...cardStyle, gridColumn: '1 / -1' }}>
@@ -998,6 +1533,7 @@ const Dashboard = (props) => {
 
           <div
             ref={containerRef}
+            onScroll={handleScroll}
             style={{
               maxHeight: '400px',
               overflowY: 'auto',
@@ -1023,24 +1559,7 @@ const Dashboard = (props) => {
                 </tr>
               </thead>
 
-              <tbody>
-                {districtSummaryData.slice(0, visibleCount).map((row, idx) => (
-                  <tr key={idx}>
-                    <td style={tdStyle}>{row.district}</td>
-                    <td style={tdStyle}>{row.block}</td>
-                    <td style={tdStyle}>{row.numberOfGroups}</td>
-                    <td style={tdStyle}>{row.numberOfClusters}</td>
-                    <td style={tdStyle}>{row.totalStudents}</td>
-                    <td style={tdStyle}>{row.totalSchools}</td>
-                    <td style={tdStyle}>{row.totalContactNumbers}</td>
-                    {Array.from({ length: 10 }, (_, i) => (
-                      <td key={i} style={tdStyle}>
-                        {row.classWiseStudents[`class${i + 1}`]}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
+              <tbody>{renderRows()}</tbody>
             </table>
           </div>
         </div>

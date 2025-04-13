@@ -1,87 +1,52 @@
 import React, { useEffect, useRef } from 'react'
-import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import {
-  CContainer,
-  CDropdown,
-  CDropdownItem,
-  CDropdownMenu,
-  CDropdownToggle,
-  CHeader,
-  CHeaderNav,
-  CHeaderToggler,
-  useColorModes,
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import { cilContrast, cilMoon, cilSun } from '@coreui/icons'
-
+import { CContainer, CHeader, CHeaderNav, CHeaderToggler } from '@coreui/react'
 import { AppHeaderDropdown } from './header/index'
 
 const AppHeader = () => {
   const headerRef = useRef()
-  const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
-
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
   useEffect(() => {
-    document.addEventListener('scroll', () => {
-      headerRef.current &&
+    const handleScroll = () => {
+      if (headerRef.current) {
         headerRef.current.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0)
-    })
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => document.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <CHeader position="sticky" className="mb-4 p-0" ref={headerRef}>
-      <CContainer className="border-bottom px-4" fluid>
+    <CHeader position="sticky" className="mb-4 p-0 bg-white" ref={headerRef}>
+      <CContainer
+        className="border-bottom px-4 d-flex justify-content-between align-items-center position-relative"
+        fluid
+      >
+        {/* Sidebar toggler on the left */}
         <CHeaderToggler
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
-          style={{ marginInlineStart: '-14px' }}
+          className="me-3"
         >
-          <div className="text-xl font-semibold text-blue-600">OSEPA</div>
+          <i className="fas fa-bars fs-5 text-primary"></i>
         </CHeaderToggler>
 
-        <CHeaderNav>
-          <CDropdown variant="nav-item" placement="bottom-end">
-            <CDropdownToggle caret={false}>
-              {colorMode === 'dark' ? (
-                <CIcon icon={cilMoon} size="lg" />
-              ) : colorMode === 'auto' ? (
-                <CIcon icon={cilContrast} size="lg" />
-              ) : (
-                <CIcon icon={cilSun} size="lg" />
-              )}
-            </CDropdownToggle>
-            <CDropdownMenu>
-              <CDropdownItem
-                active={colorMode === 'light'}
-                className="d-flex align-items-center"
-                as="button"
-                type="button"
-                onClick={() => setColorMode('light')}
-              >
-                <CIcon className="me-2" icon={cilSun} size="lg" /> Light
-              </CDropdownItem>
-              <CDropdownItem
-                active={colorMode === 'dark'}
-                className="d-flex align-items-center"
-                as="button"
-                type="button"
-                onClick={() => setColorMode('dark')}
-              >
-                <CIcon className="me-2" icon={cilMoon} size="lg" /> Dark
-              </CDropdownItem>
-              <CDropdownItem
-                active={colorMode === 'auto'}
-                className="d-flex align-items-center"
-                as="button"
-                type="button"
-                onClick={() => setColorMode('auto')}
-              >
-                <CIcon className="me-2" icon={cilContrast} size="lg" /> Auto
-              </CDropdownItem>
-            </CDropdownMenu>
-          </CDropdown>
+        {/* Centered title */}
+        <div
+          className="position-absolute start-50 translate-middle-x text-center"
+          style={{ zIndex: 0 }}
+        >
+          <h4
+            className="mb-0 fw-bold text-primary-emphasis"
+            style={{ fontSize: '1.6rem', letterSpacing: '1px' }}
+          >
+            WA-GA REPORT
+          </h4>
+        </div>
+
+        {/* Profile dropdown on the right */}
+        <CHeaderNav className="ms-auto d-flex align-items-center">
           <AppHeaderDropdown />
         </CHeaderNav>
       </CContainer>
