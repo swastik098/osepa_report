@@ -10,20 +10,10 @@ import {
   CHeader,
   CHeaderNav,
   CHeaderToggler,
-  CNavLink,
-  CNavItem,
   useColorModes,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import {
-  cilBell,
-  cilContrast,
-  cilEnvelopeOpen,
-  cilList,
-  cilMenu,
-  cilMoon,
-  cilSun,
-} from '@coreui/icons'
+import { cilContrast, cilMoon, cilSun } from '@coreui/icons'
 
 import { AppHeaderDropdown } from './header/index'
 
@@ -48,21 +38,9 @@ const AppHeader = () => {
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
           style={{ marginInlineStart: '-14px' }}
         >
-          <div className="text-xl font-semibold text-blue-600">OSEPA Panel</div>
+          <div className="text-xl font-semibold text-blue-600">OSEPA</div>
         </CHeaderToggler>
-        <CHeaderNav className="d-none d-md-flex">
-          <CNavItem>
-            <CNavLink to="/dashboard" as={NavLink}>
-              State
-            </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">District</CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">Classwise</CNavLink>
-          </CNavItem>
-        </CHeaderNav>
+
         <CHeaderNav>
           <CDropdown variant="nav-item" placement="bottom-end">
             <CDropdownToggle caret={false}>
