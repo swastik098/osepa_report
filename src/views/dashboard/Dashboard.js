@@ -88,10 +88,47 @@ const Dashboard = () => {
     { title: 'LinkedIn', icon: cibLinkedin, percent: 8, value: '27,319' },
   ]
 
+  const odishaData = [
+    {
+      district: 'Khordha',
+      blocks: 10,
+      students: 12000,
+    },
+    {
+      district: 'Cuttack',
+      blocks: 12,
+      students: 11000,
+    },
+    {
+      district: 'Puri',
+      blocks: 8,
+      students: 8500,
+    },
+  ]
+
   const random = () => Math.round(Math.random() * 100)
 
   return (
     <>
+      <CRow className="mb-4">
+        {odishaData.map((item, index) => (
+          <CCol key={index} xs={12} sm={6} md={4} lg={3}>
+            <CCard className="text-center shadow-sm border-0 rounded-4">
+              <CCardBody>
+                <h5 className="fw-bold mb-3">{item.district}</h5>
+                <div className="text-body-secondary">Blocks: {item.blocks}</div>
+                <div className="text-body-secondary mb-2">Students: {item.students}</div>
+                <CProgress
+                  thin
+                  value={(item.students / 15000) * 100}
+                  color="info"
+                  className="mt-3"
+                />
+              </CCardBody>
+            </CCard>
+          </CCol>
+        ))}
+      </CRow>
       <WidgetsDropdown className="mb-4" />
       <CRow>
         <CCol xs={12}></CCol>

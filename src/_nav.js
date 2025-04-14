@@ -20,7 +20,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard State View',
-    to: '/dashboard ',
+    to: '/ ',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
       color: 'info',
@@ -30,7 +30,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard District View',
-    to: '/dashboard',
+    to: '/',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
       color: 'info',
@@ -40,7 +40,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Dashboard Class View',
-    to: '/dashboard',
+    to: '/',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
       color: 'info',

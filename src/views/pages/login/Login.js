@@ -92,7 +92,7 @@ const Login = () => {
       // Handle other cases
       if (hasValidPayload) {
         // Additional success case if needed
-        showAlert('Login successful', 'success')
+        // showAlert('Login successful', 'success')
       } else {
         showAlert(response.message || 'Invalid userid/password', 'error')
       }

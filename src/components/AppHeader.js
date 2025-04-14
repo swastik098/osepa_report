@@ -52,15 +52,15 @@ const AppHeader = () => {
         </CHeaderToggler>
         <CHeaderNav className="d-none d-md-flex">
           <CNavItem>
-            <CNavLink to="/dashboard" as={NavLink}>
+            <CNavLink to="/" as={NavLink}>
               State
             </CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink href="#">District</CNavLink>
+            <CNavLink>District</CNavLink>
           </CNavItem>
           <CNavItem>
-            <CNavLink href="#">Classwise</CNavLink>
+            <CNavLink>Classwise</CNavLink>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav>

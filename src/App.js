@@ -54,7 +54,7 @@ const App = () => {
             }
           />
           <Route exact path="/404" name="Page 404" element={<Page404 />} />
-          <Route path="*" name="Home" element={<DefaultLayout />} />
+          {/* <Route path="*" name="Home" element={<DefaultLayout />} /> */}
         </Routes>
       </Suspense>
     </HashRouter>
