@@ -470,9 +470,12 @@ const Dashboard = (props) => {
     block: '',
     school: '',
     cluster: '',
+    class: '',
     trainingDateFrom: '',
     trainingDateTo: '',
   })
+
+  console.log('filters', filters)
   const [selectedRange, setSelectedRange] = useState([])
   const [stDate, setStDate] = useState()
   const [NdDate, setNdDate] = useState()
@@ -643,6 +646,9 @@ const Dashboard = (props) => {
       cluster: '',
       school: '',
     })
+    setSelectedYear(null)
+    setSelectedMonth(null)
+    setSelectedRange(null)
   }
 
   const handleBlockChange = (selectedOption) => {
@@ -668,6 +674,13 @@ const Dashboard = (props) => {
       school: selectedOption?.value || '',
     }))
   }
+  const handleClassChange = (selectedOption) => {
+    setFilters((prev) => ({
+      ...prev,
+      class: selectedOption?.value || '',
+    }))
+  }
+
   const handleRangeChange = (dates) => {
     setSelectedRange(dates)
 
@@ -703,8 +716,23 @@ const Dashboard = (props) => {
       },
     },
   }
+  const classOptions = Array.from({ length: 10 }, (_, i) => ({
+    label: `Class ${i + 1}`,
+    value: `Class${i + 1}`,
+  }))
 
   const getDashboardFields = (filters) => {
+    if (filters.class) {
+      return [
+        'Total Students',
+        'Number of Content Read',
+        'Videos Received',
+        'Images Received',
+        'Audios Received',
+        'Two-way Interaction Messages',
+      ]
+    }
+
     if (filters.school) {
       return [
         'Class wise no of students',
@@ -831,6 +859,24 @@ const Dashboard = (props) => {
           'Number of Students': '8,000',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '3,000',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         February: {
           'Number of Blocks': '312',
@@ -852,6 +898,24 @@ const Dashboard = (props) => {
           'Number of Students': '8,100',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '3,100',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         March: {
           'Number of Blocks': '313',
@@ -873,6 +937,24 @@ const Dashboard = (props) => {
           'Number of Students': '8,200',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '3,150',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         April: {
           'Number of Blocks': '314',
@@ -894,6 +976,24 @@ const Dashboard = (props) => {
           'Number of Students': '8,300',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '3,200',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
       },
     },
@@ -920,6 +1020,24 @@ const Dashboard = (props) => {
           'Number of Students': '7,000',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '2,400',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         February: {
           'Number of Blocks': '292',
@@ -941,6 +1059,24 @@ const Dashboard = (props) => {
           'Number of Students': '7,100',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '2,500',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         March: {
           'Number of Blocks': '293',
@@ -962,6 +1098,24 @@ const Dashboard = (props) => {
           'Number of Students': '7,200',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '2,550',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         April: {
           'Number of Blocks': '295',
@@ -983,6 +1137,24 @@ const Dashboard = (props) => {
           'Number of Students': '7,300',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '2,600',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
       },
     },
@@ -1009,6 +1181,24 @@ const Dashboard = (props) => {
           'Number of Students': '4,000',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '1,000',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         February: {
           'Number of Blocks': '152',
@@ -1030,6 +1220,24 @@ const Dashboard = (props) => {
           'Number of Students': '4,100',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '1,050',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         March: {
           'Number of Blocks': '153',
@@ -1051,6 +1259,24 @@ const Dashboard = (props) => {
           'Number of Students': '4,200',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '1,100',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         April: {
           'Number of Blocks': '155',
@@ -1072,6 +1298,24 @@ const Dashboard = (props) => {
           'Number of Students': '4,300',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '1,150',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
       },
     },
@@ -1098,6 +1342,24 @@ const Dashboard = (props) => {
           'Number of Students': '3,500',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '900',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         February: {
           'Number of Blocks': '122',
@@ -1119,6 +1381,24 @@ const Dashboard = (props) => {
           'Number of Students': '3,700',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '950',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         March: {
           'Number of Blocks': '125',
@@ -1140,6 +1420,24 @@ const Dashboard = (props) => {
           'Number of Students': '3,900',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '1,000',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         April: {
           'Number of Blocks': '128',
@@ -1161,6 +1459,24 @@ const Dashboard = (props) => {
           'Number of Students': '4,100',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '1,050',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
       },
     },
@@ -1186,6 +1502,24 @@ const Dashboard = (props) => {
           'Number of Students': '3,000',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '800',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         February: {
           'Number of Blocks': '112',
@@ -1207,6 +1541,24 @@ const Dashboard = (props) => {
           'Number of Students': '3,200',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '850',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         March: {
           'Number of Blocks': '115',
@@ -1228,6 +1580,24 @@ const Dashboard = (props) => {
           'Number of Students': '3,400',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '900',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
         April: {
           'Number of Blocks': '118',
@@ -1249,6 +1619,24 @@ const Dashboard = (props) => {
           'Number of Students': '3,600',
           'Class wise no of students': 'Dynamic',
           'Two-way Interaction Messages': '950',
+          class: {
+            class1: {
+              'Total Students': '1,000',
+              'Number of Content Read': '850',
+              'Videos Received': '300',
+              'Images Received': '200',
+              'Audios Received': '100',
+              'Two-way Interaction Messages': '400',
+            },
+            class2: {
+              'Total Students': '900',
+              'Number of Content Read': '800',
+              'Videos Received': '290',
+              'Images Received': '190',
+              'Audios Received': '90',
+              'Two-way Interaction Messages': '350',
+            },
+          },
         },
       },
     },
@@ -1361,14 +1749,31 @@ const Dashboard = (props) => {
     }
   }
 
-  const selectedRegionKey = filters.school || filters.cluster || filters.block || filters.district
+  const selectedRegionKey = filters.district?.toLowerCase()
+  const hasDateSelected = selectedYear && selectedMonth
 
   let selectedDashboardValues = dashboardValues
 
-  if (selectedRegionKey && selectedYear && selectedMonth) {
-    selectedDashboardValues =
-      dashboardValuesByRegion[selectedRegionKey]?.[selectedYear]?.[selectedMonth] || dashboardValues
+  if (selectedRegionKey) {
+    const regionData = dashboardValuesByRegion[selectedRegionKey]
+
+    // Choose the right month/year:
+    const yearToUse = hasDateSelected ? selectedYear : 2025
+    const monthToUse = hasDateSelected ? selectedMonth : 'April'
+
+    const dataForRegionAndDate = regionData?.[yearToUse]?.[monthToUse]
+
+    if (dataForRegionAndDate) {
+      if (filters.class && dataForRegionAndDate.class?.[filters.class.toLowerCase()]) {
+        selectedDashboardValues = dataForRegionAndDate.class[filters.class.toLowerCase()]
+      } else {
+        selectedDashboardValues = dataForRegionAndDate
+      }
+    } else {
+      console.warn('No data for selected date or default. Showing base values.')
+    }
   }
+
   if (!dashboardValuesByRegion[selectedRegionKey]?.[selectedYear]?.[selectedMonth]) {
     console.warn('No data for selected date range. Showing default values.')
   }
@@ -1436,6 +1841,17 @@ const Dashboard = (props) => {
           placeholder="Select School"
           components={{ Option: CustomOption }}
         />
+        {filters.school && (
+          <Select
+            options={classOptions}
+            value={classOptions.find((cls) => cls.value === filters.class)}
+            onChange={handleClassChange}
+            styles={customStyles}
+            isClearable
+            isSearchable
+            placeholder="Select Class"
+          />
+        )}
 
         <div>
           <RangePicker
@@ -1479,13 +1895,6 @@ const Dashboard = (props) => {
                 padding: '16px',
                 textAlign: 'center',
                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                // flex: '1 1 calc(20% - 16px)',
-                // backgroundColor: fieldConfigs[field]?.color || '#E0E0E0',
-                // borderRadius: '12px',
-                // padding: '16px',
-                // textAlign: 'center',
-                // boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                // minWidth: '200px',
               }}
             >
               <h3 style={{ margin: 0, fontSize: '28px', fontWeight: 'bold' }}>{value}</h3>
