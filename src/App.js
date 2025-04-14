@@ -53,8 +53,8 @@ const App = () => {
               </PublicRoute>
             }
           />
-          <Route exact path="/404" name="Page 404" element={<Page404 />} />
-          {/* <Route path="*" name="Home" element={<DefaultLayout />} /> */}
+          {/* <Route exact path="/404" name="Page 404" element={<Page404 />} /> */}
+          <Route path="*" name="Page 404" element={<Page404 />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
